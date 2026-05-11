@@ -1,0 +1,46 @@
+{
+  "name": "thriller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "dev:cf": "wrangler pages dev --proxy 5173 --port 8788",
+    "build": "tsc --noEmit && vite build",
+    "deploy": "npm run build && wrangler pages deploy dist --commit-dirty=true",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuelo-labs/thriller.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/vuelo-labs/thriller/issues"
+  },
+  "homepage": "https://github.com/vuelo-labs/thriller#readme",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "@vitejs/plugin-react": "^6.0.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.13.1",
+    "remark-gfm": "^4.0.1",
+    "tailwindcss": "^4.2.2",
+    "tsx": "^4.21.0",
+    "vite": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/turndown": "^5.0.6",
+    "turndown": "^7.2.4",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.5"
+  }
+}
